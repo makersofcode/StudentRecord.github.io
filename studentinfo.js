@@ -162,6 +162,8 @@ function getInsertedData(stud) {
 }
 
 function GenerateTable() {
+  var messagesRef = firebase.database().ref();
+  messagesRef.push(student);
   console.log("check length====student object" + student.length);
   if (student.length == 0) {
     //  btnSave.hidden = true;
@@ -202,15 +204,12 @@ function GenerateTable() {
       if (j < columnCount - 2) {
         // console.log("-------firstp000000----" + j);
         var td = document.createElement("TD");
-        //td.innerHTML = Object.values(student[i])[j];
-
+        td.innerHTML = Object.values(student[i])[j];
         function SortName(x, y) {
           return x.name.localeCompare(y.name);
         }
 
         student.sort(SortName);
-
-        td.innerHTML = Object.values(student[i])[j];
       }
       if (j == columnCount - 2) {
         var td = document.createElement("TD");
