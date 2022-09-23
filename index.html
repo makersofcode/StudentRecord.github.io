@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body
+            {
+                font-family: Arial;
+                font-size: 10pt;
+            }
+            table
+            {
+                border: 1px solid #ccc;
+                border-collapse: collapse;
+            }
+            table th
+            {
+                background-color: #F7F7F7;
+                color: #333;
+                font-weight: bold;
+            }
+            table th, table td
+            {
+                padding: 5px;
+                border-color: #ccc;
+            }
+            #studentform
+            {
+                width: 500px;
+                height: 100%;
+
+            }
+            label 
+            {
+                color: #B4886B;
+                font-weight: bold;
+                width: 130px;
+                float: left;
+                margin-top: 10px;
+
+            }
+            input
+            {
+                margin-top: 10px;
+            }
+            
+        
+            
+        </style>
+    </head>
+<body>
+    <form name="studentform">
+        <div id="todo-input">
+            
+            <label id="lblIndx">Where to insert:</label>
+            <input  id="indexvalue" type="text" placeholder="Where to inserd record"
+                    name="indexvalue"><br>
+            <label>Rollno:</label>
+            <input  id="rollno" type="text" placeholder="rollno" name="rollno"><br>
+            <label>Name:</label>
+                <input id="studName" type="text" placeholder="your name" name="name"><br>
+            <label>Enter your ciy:</label><input  id="city" type="text" placeholder="city" name="city"><br>
+            <label>Standard</label><input  id="standard" type="text" placeholder="standard" name="standard"><br>
+            <label>Percentage</label>
+            <input  id="percentage" type="text" placeholder="percentage" 
+                    name="percentage"><br>
+            <label>School</label><input  id="school" type="text" placeholder="school" name="school"><br>
+
+            </form>
+            <input type="button" id="btnsubmit" value="sumbit" onclick="submitData()" />
+            <input type="button" id="btnsave" value="Save"  />
+            <input type="button" value="Generate Table" onclick="GenerateTable()" />
+            <hr />
+            <div id="dvTable">
+            </div>
+        </div>   
+
+
+
+<script src="studentinfo.js">
+</script>
+
+</body>
+</html>
